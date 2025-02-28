@@ -2,14 +2,15 @@ version: 2
 
 sources:
   - name: staging
-    database: "{{ env_var('DBT_DATABASE', 'taxi-rides-ny-339813-412521') }}"
-    schema: "{{ env_var('DBT_SCHEMA', 'trips_data_all') }}"
+    database: "{{ env_var('DBT_DATABASE', 'lofty-hybrid-448518-c8') }}"
+    schema: "{{ env_var('DBT_SCHEMA', 'github_data') }}"
       # loaded_at_field: record_loaded_at
     tables:
-      - name: green_tripdata
-      - name: yellow_tripdata
+      - name: green_taxi
+      - name: yellow_taxi
          # freshness:
            # error_after: {count: 6, period: hour}
+      - name: fhv
 
 models:
     - name: stg_green_tripdata
