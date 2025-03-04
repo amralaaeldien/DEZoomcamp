@@ -23,6 +23,8 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 
+Module4/.dlt/secrets.toml
+
 # Ignore transient lock info files created by terraform apply
 .terraform.tfstate.lock.info
 
